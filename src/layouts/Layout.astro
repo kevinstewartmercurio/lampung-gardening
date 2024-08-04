@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +8,129 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
+<style>
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-ExtraLight.ttf");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BricolageGrotesque";
+    src: url("/fonts/bricolage-grotesque/BricolageGrotesque-ExtraBold.ttf");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-Thin.ttf");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-ExtraLight.ttf");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-ExtraBold.ttf");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Raleway";
+    src: url("/fonts/raleway/Raleway-Black.ttf");
+    font-weight: 900;
+    font-style: normal;
+  }
 </style>
