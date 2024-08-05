@@ -1,0 +1,86 @@
+---
+import Logo from "./svg/logo.astro";
+import MagnifyingGlass from "./svg/magnifying-glass.astro";
+import Cart from "./svg/cart.astro";
+---
+
+<div class="fixed top-0 z-50 w-full">
+  <div
+    class="mx-auto w-full max-w-[96rem] rounded-b-[1.875rem] px-5 pb-6 pt-3 backdrop-blur-sm"
+  >
+    <div class="flex items-center justify-between">
+      <a href="/"><Logo /></a>
+      <div class="flex items-center gap-x-8">
+        <div class="relative">
+          <input
+            type="search"
+            placeholder="Search plants..."
+            class="h-8 w-72 appearance-none rounded-md pl-3 pr-10 font-raleway text-lg font-extralight outline-none"
+          />
+          <button
+            class="absolute -right-6 top-0 flex h-8 w-14 items-center justify-center rounded-full bg-[#5E9E4D] transition hover:bg-[#1A7303] focus-visible:bg-[#1A7303]"
+          >
+            <MagnifyingGlass class="scale-90" />
+          </button>
+        </div>
+        <a
+          href="/"
+          class="flex h-8 w-14 items-center justify-center rounded-full bg-[#5E9E4D] transition hover:bg-[#1A7303] focus-visible:bg-[#1A7303]"
+        >
+          <Cart class="scale-90" />
+        </a>
+      </div>
+    </div>
+    <hr class="my-5 border-[#1A730380]" />
+    <div class="flex items-center justify-between">
+      <ul class="flex gap-x-12">
+        {
+          [
+            "Home",
+            "Plants",
+            "Plant Collection",
+            "About",
+            "Blog",
+            "Contact",
+          ].map((navLink) => (
+            <li>
+              <a
+                href="/"
+                class="relative inline-block font-raleway after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:transform after:bg-black after:transition after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 focus:outline-black focus:after:origin-bottom-left focus:after:scale-x-100"
+              >
+                {navLink}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/"
+        class="relative inline-block font-raleway after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:transform after:bg-black after:transition after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 focus:outline-black focus:after:origin-bottom-left focus:after:scale-x-100"
+      >
+        Log In / Sign Up
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* clears the ‘X’ from Internet Explorer */
+  input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  /* clears the ‘X’ from Chrome */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+</style>
